@@ -1,0 +1,60 @@
+.post__inf {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  h3 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  p {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  button {
+    width: 70px;
+    margin: 20px 0 0 10px;
+  }
+}
+
+.edit__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 10px;
+  gap: 20px;
+  input {
+    max-width: 300px;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.comments__block {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  padding: 20px;
+  align-items: center;
+  h2 {
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+
+  .comment {
+    max-width: 400px;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(198, 196, 196);
+  }
+}
+
+.comment__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  align-items: center;
+  margin: 20px auto;
+}
