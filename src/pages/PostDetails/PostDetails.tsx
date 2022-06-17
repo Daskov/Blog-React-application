@@ -81,6 +81,7 @@ const PostDetails: FC = () => {
           variant="outlined"
           multiline
           rows={5}
+          required
         />
         <Button type="submit">Add</Button>
       </form>

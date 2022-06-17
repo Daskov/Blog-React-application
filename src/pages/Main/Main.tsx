@@ -1,20 +1,12 @@
 import "./styles.scss";
-import { setPopup } from "../../store/mainSlice";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { fetchPostsAsync } from "../../store/action";
 import { FC, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  Button,
-} from "@mui/material";
 
 export const Main: FC = () => {
   const dispatch = useAppDispatch();
-  const { posts, popUp } = useAppSelector(({ mainSlice }) => mainSlice);
+  const { posts } = useAppSelector(({ mainSlice }) => mainSlice);
 
   useEffect(() => {
     dispatch(fetchPostsAsync());
@@ -30,24 +22,6 @@ export const Main: FC = () => {
               <Link to={`/post/${item.id}`}>Details...</Link>
             </div>
           ))}
-
-          <Dialog
-            open={popUp}
-            onClose={() => dispatch(setPopup(false))}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-          >
-            <DialogContent>
-              <DialogContentText id="alert-dialog-description">
-                You have successfully added a new post
-              </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={() => dispatch(setPopup(false))} autoFocus>
-                Agree
-              </Button>
-            </DialogActions>
-          </Dialog>
         </div>
       </div>
     </>
